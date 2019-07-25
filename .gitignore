@@ -5,3 +5,4 @@ out_create/
 out.json
 report.txt
 src/__pycache__/
+test_report

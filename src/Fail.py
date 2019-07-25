@@ -12,7 +12,7 @@ class Fail:
 
     @staticmethod
     def _get_filename(file_name) -> str:
-        file_name = file_name.split('\\')[1]
+        file_name = file_name.split('/')[-1]
         return file_name.split(".")[0]
 
 

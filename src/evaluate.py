@@ -1,19 +1,55 @@
 import os
 import glob
 from typing import *
-from tika import parser
 import json
+from tika import parser
 
-from src.Fail import Fail
+from src.Fail import Fail, Word_Fail
+
+
+def get_pdf_content(pdf_filename):
+    raw = parser.from_file(pdf_filename)
+    return raw['content']
+
+
+def test(path: str):
+    for filepath in glob.glob(os.path.join(path, '*.txt')):
+        txt_content = open(filepath).read()
+
+        pdf_filename = txt_to_pdf_filename(filepath)
+        pdf_content = get_pdf_content(pdf_filename)
+
+        levenstein: int = Word_Fail._levenstein(pdf_content, txt_content)
+        filename = filepath.split("/")[-1]
+        filename = filename.split(".")[0]
+        test_report(filename, levenstein)
+
+
+def txt_to_pdf_filename(txt_filenmae: str):
+    dir_path = txt_filenmae.split("/")
+    pdf_filename = dir_path.pop(-1)
+    dir_path = "/".join(dir_path)
+    pdf_filename = dir_path + '/' + pdf_filename.split(".")[0] + '.pdf'
+    return pdf_filename
+
+
+def test_report(filename: str, levenstein: int):
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", 'test_report.txt')
+    if os.path.exists(file_path):
+        file = open(file_path, 'a')
+    else:
+        file = open(file_path, 'w')
+    file.write(f'{filename}:\t{levenstein}\n')
 
 
 def main(path: str):
     passed_files: List[str] = []
     fails: List[Fail] = []
 
-    should_read = get_lorem()
-    for filename in glob.glob(os.path.join(path, '*.pdf')):
+    for filename in glob.glob(os.path.join(path, '*.txt')):
         file_words = get_pdf_words(filename)
+        pdf_filename = txt_to_pdf_filename(filename)
+        should_read = get_lorem(pdf_filename)
         if len(file_words) != len(should_read):
             fails.append(Fail(filename, is_len_error=True))
             continue
@@ -32,12 +68,12 @@ def main(path: str):
             fails.append(Fail(filename, error_tuples=error_tuples))
 
     report(fails)
-    print(f'Passed files: {passed_files}')
     log_fails(fails)
 
 
-def get_lorem():
-    lorem = open('../lorem.txt').read()
+def get_lorem(pdf_filename):
+    raw = parser.from_file(pdf_filename)
+    lorem =  raw['content']
     lorem_lines = lorem.split('\n')
     lorem_words: List[str] = []
     for line in lorem_lines:
@@ -47,8 +83,7 @@ def get_lorem():
 
 def get_pdf_words(filename: str):
     words: List[str] = []
-    raw = parser.from_file(filename)
-    pdf_content = raw['content']
+    pdf_content = open(filename).read()
     pdf_lines = pdf_content.split("\n")
     for line in pdf_lines:
         words.extend(line.split(" "))
@@ -113,36 +148,7 @@ def serialize_data(fails: List[Fail]):
     return list(map(lambda fail: fail.__dict__, fails_copy))
 
 
-def get_words(filename):
-    file_content = open(filename).read()
-    file_lines = file_content.split("\n")
-    file_words = []
-    for line in file_lines:
-        file_words.extend(line.split(" "))
-
-    pdf_filename = ""
-    pdf_filename_list = filename.split("_")
-    pdf_filename_list = pdf_filename_list[:-1]
-    for sub_filename in pdf_filename_list:
-        pdf_filename += sub_filename + "_"
-    pdf_filename = pdf_filename[:-1]
-    pdf_filename += ".pdf"
-
-    raw = parser.from_file(pdf_filename)
-    pdf_content = raw['content']
-    pdf_lines = pdf_content.split("\n")
-
-    pdf_words = []
-    pdf_words_tmp = []
-    for line in pdf_lines:
-        pdf_words_tmp.extend(line.split(" "))
-    for word in pdf_words_tmp:
-        if len(word) != 0:
-            pdf_words.append(word)
-
-    return file_words, pdf_words
-
-
 if __name__ == "__main__":
-    # test()
-    main('../out_create/')
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", 'out_create/')
+    test(file_path)
+    main(file_path)

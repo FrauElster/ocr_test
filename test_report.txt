@@ -1,0 +1,308 @@
+Roboto-Thin_23:	99
+Roboto-BoldCondensed_20:	114
+Roboto-Regular_22:	84
+Champagne & Limousines Bold_16:	121
+Roboto-LightItalic_18:	129
+CaviarDreams Italic_16:	160
+Roboto-BoldCondensedItalic_19:	121
+Roboto-ThinItalic_17:	136
+CaviarDreams Bold_17:	113
+Courier_17:	63
+Roboto-ThinItalic_22:	131
+Times_25:	39
+Roboto-Medium_24:	110
+Champagne & Limousines Bold Italic_20:	148
+Champagne & Limousines Bold Italic_16:	132
+CaviarDreams BoldItalic_16:	137
+CaviarDreams Bold_21:	111
+Roboto-ThinItalic_16:	124
+Roboto-BlackItalic_22:	93
+Roboto-Bold_17:	117
+Champagne & Limousines_23:	97
+Roboto-BoldItalic_15:	111
+CaviarDreams Italic_24:	140
+Roboto-ThinItalic_19:	127
+Courier_24:	73
+Champagne & Limousines_24:	98
+Arial_24:	41
+Roboto-BlackItalic_19:	121
+Champagne & Limousines_16:	227
+Champagne & Limousines_15:	259
+Roboto-Italic_16:	144
+Times_18:	89
+Roboto-Light_16:	108
+Roboto-Regular_21:	109
+Roboto-Light_24:	105
+Roboto-BoldCondensedItalic_24:	119
+Roboto-Bold_21:	111
+Roboto-LightItalic_23:	112
+CaviarDreams_22:	97
+Roboto-Thin_17:	116
+CaviarDreams BoldItalic_18:	113
+Roboto-Italic_19:	120
+Roboto-CondensedItalic_21:	99
+vogue_16:	602
+Roboto-Italic_17:	115
+Roboto-Black_24:	103
+CaviarDreams Italic_23:	134
+Roboto-BoldCondensed_16:	105
+Roboto-ThinItalic_21:	101
+Times_15:	88
+Roboto-Thin_20:	103
+Roboto-Regular_25:	109
+Roboto-BlackItalic_20:	105
+Roboto-BlackItalic_15:	118
+Champagne & Limousines Italic_22:	158
+Courier_16:	55
+Roboto-BoldCondensedItalic_20:	120
+Roboto-MediumItalic_23:	107
+Arial_19:	51
+Roboto-Light_18:	121
+Times_21:	42
+Champagne & Limousines Italic_15:	397
+Champagne & Limousines_17:	191
+vogue_24:	605
+vogue_21:	616
+Champagne & Limousines Italic_20:	176
+CaviarDreams Bold_22:	85
+Roboto-Condensed_18:	92
+CaviarDreams BoldItalic_21:	116
+Champagne & Limousines Italic_25:	151
+Roboto-MediumItalic_22:	98
+Arial_23:	43
+Roboto-BlackItalic_18:	99
+Champagne & Limousines Bold Italic_17:	131
+Roboto-LightItalic_16:	113
+Roboto-Black_19:	119
+Courier_15:	121
+Roboto-Medium_20:	100
+Times_17:	79
+Arial_22:	37
+Roboto-BoldItalic_17:	123
+Roboto-Light_23:	114
+Roboto-Bold_25:	102
+Roboto-Black_15:	111
+Roboto-BoldCondensed_21:	98
+Roboto-Italic_23:	108
+Champagne & Limousines Italic_18:	247
+Roboto-BlackItalic_16:	120
+Roboto-BoldCondensed_17:	112
+Champagne & Limousines Italic_24:	114
+Roboto-Light_21:	89
+Roboto-MediumItalic_19:	123
+Roboto-Thin_25:	123
+Roboto-Medium_19:	113
+Roboto-Bold_20:	93
+Roboto-Medium_21:	119
+Champagne & Limousines Bold_18:	115
+Roboto-BlackItalic_21:	114
+CaviarDreams_24:	135
+Roboto-Bold_19:	116
+Roboto-LightItalic_25:	125
+CaviarDreams_25:	100
+Champagne & Limousines Bold_17:	121
+Times_19:	52
+Roboto-LightItalic_15:	150
+Roboto-CondensedItalic_23:	105
+Times_24:	42
+CaviarDreams BoldItalic_17:	123
+Roboto-Thin_21:	102
+vogue_20:	610
+Champagne & Limousines Bold_22:	100
+Roboto-BoldItalic_25:	107
+Roboto-Black_20:	105
+CaviarDreams Italic_17:	160
+Roboto-BoldItalic_21:	117
+CaviarDreams_21:	94
+Roboto-ThinItalic_20:	115
+vogue_18:	593
+Champagne & Limousines Italic_16:	299
+Roboto-Italic_15:	122
+Roboto-Regular_20:	100
+Roboto-Medium_17:	122
+Roboto-Bold_22:	86
+Champagne & Limousines Bold Italic_23:	144
+Champagne & Limousines Bold Italic_18:	143
+Roboto-CondensedItalic_19:	98
+CaviarDreams Bold_24:	101
+Roboto-LightItalic_21:	100
+CaviarDreams BoldItalic_23:	95
+Roboto-BoldItalic_20:	100
+Champagne & Limousines Bold Italic_21:	118
+Champagne & Limousines Bold Italic_25:	130
+vogue_19:	605
+Champagne & Limousines_20:	154
+Roboto-BoldCondensed_25:	101
+Courier_18:	59
+Roboto-Regular_18:	98
+Arial_21:	38
+Arial_18:	51
+Roboto-Condensed_15:	127
+Roboto-Condensed_16:	114
+Roboto-Bold_15:	108
+Roboto-BoldCondensedItalic_17:	123
+Courier_19:	58
+Roboto-Black_18:	111
+CaviarDreams Italic_25:	118
+Roboto-Condensed_24:	114
+CaviarDreams Italic_21:	131
+CaviarDreams BoldItalic_19:	127
+Roboto-BoldItalic_22:	90
+Roboto-Condensed_21:	100
+Roboto-Black_21:	120
+Roboto-MediumItalic_21:	123
+CaviarDreams_17:	138
+Champagne & Limousines Bold Italic_15:	195
+Roboto-CondensedItalic_16:	116
+Roboto-Light_22:	110
+CaviarDreams_18:	154
+Roboto-ThinItalic_24:	114
+Times_16:	107
+Roboto-BlackItalic_25:	105
+Arial_20:	38
+Courier_25:	86
+Roboto-Medium_16:	132
+Roboto-Thin_22:	117
+CaviarDreams Bold_23:	92
+Roboto-MediumItalic_18:	114
+Arial_16:	64
+Times_20:	59
+Roboto-Italic_25:	118
+Roboto-BoldItalic_23:	107
+Roboto-Black_22:	91
+Roboto-CondensedItalic_22:	113
+CaviarDreams BoldItalic_15:	115
+CaviarDreams Bold_20:	88
+Champagne & Limousines Bold_20:	124
+Champagne & Limousines Bold Italic_22:	119
+Roboto-Black_17:	109
+Arial_17:	59
+Roboto-MediumItalic_25:	120
+CaviarDreams Italic_15:	181
+CaviarDreams Bold_18:	104
+Roboto-Light_19:	91
+Roboto-BoldCondensed_22:	103
+Roboto-LightItalic_22:	130
+CaviarDreams Bold_19:	120
+Roboto-BoldCondensedItalic_23:	95
+Roboto-BoldCondensed_19:	113
+Champagne & Limousines Bold Italic_19:	133
+Champagne & Limousines Bold Italic_24:	109
+Roboto-LightItalic_20:	101
+Roboto-Italic_22:	93
+Roboto-BoldCondensedItalic_15:	119
+CaviarDreams Italic_18:	165
+Roboto-ThinItalic_18:	130
+Roboto-Regular_23:	99
+Roboto-CondensedItalic_25:	107
+Roboto-Regular_17:	122
+Roboto-MediumItalic_15:	130
+Roboto-Thin_19:	113
+Champagne & Limousines_25:	126
+Champagne & Limousines Italic_23:	132
+Times_22:	42
+Roboto-CondensedItalic_20:	118
+Roboto-CondensedItalic_24:	125
+Roboto-Condensed_23:	101
+CaviarDreams_23:	124
+CaviarDreams BoldItalic_25:	112
+Champagne & Limousines Bold_15:	155
+Champagne & Limousines Italic_21:	176
+CaviarDreams Italic_20:	177
+Roboto-BoldCondensedItalic_21:	107
+Roboto-BoldCondensed_23:	100
+Roboto-MediumItalic_20:	102
+Roboto-Regular_19:	115
+Roboto-Condensed_20:	104
+Roboto-Regular_16:	135
+Roboto-Medium_23:	103
+Roboto-Italic_18:	108
+CaviarDreams BoldItalic_20:	89
+Roboto-BlackItalic_17:	111
+Roboto-CondensedItalic_17:	130
+Roboto-BoldItalic_24:	104
+vogue_15:	604
+CaviarDreams Italic_19:	165
+Roboto-LightItalic_17:	131
+Roboto-Bold_18:	103
+Champagne & Limousines Bold_25:	118
+Roboto-BoldItalic_16:	130
+Courier_21:	61
+Roboto-Bold_16:	124
+Roboto-BoldCondensedItalic_25:	96
+Courier_20:	61
+Roboto-Medium_15:	120
+Roboto-Black_25:	104
+Times_23:	39
+Champagne & Limousines_18:	156
+Roboto-Light_15:	134
+Roboto-BoldCondensedItalic_16:	108
+vogue_17:	604
+Roboto-BoldCondensed_24:	113
+Roboto-Italic_24:	109
+Roboto-Regular_24:	108
+Champagne & Limousines Italic_17:	258
+Roboto-MediumItalic_16:	139
+CaviarDreams BoldItalic_24:	107
+Roboto-Thin_18:	113
+CaviarDreams Bold_15:	108
+Roboto-Condensed_17:	119
+CaviarDreams_19:	134
+Roboto-BoldItalic_19:	116
+Roboto-MediumItalic_24:	114
+Roboto-Bold_24:	101
+Champagne & Limousines Italic_19:	170
+Champagne & Limousines Bold_21:	96
+Roboto-Italic_20:	98
+Champagne & Limousines Bold_19:	119
+Roboto-Condensed_25:	103
+Roboto-BlackItalic_23:	101
+CaviarDreams Bold_16:	131
+Roboto-Medium_25:	114
+Roboto-Medium_22:	93
+Roboto-Regular_15:	106
+Champagne & Limousines_21:	167
+Roboto-CondensedItalic_18:	88
+Roboto-Thin_16:	109
+Roboto-BoldCondensed_18:	87
+Arial_15:	54
+Roboto-LightItalic_19:	118
+Roboto-CondensedItalic_15:	133
+Roboto-Thin_15:	92
+CaviarDreams_16:	142
+CaviarDreams_20:	160
+Roboto-ThinItalic_15:	108
+Roboto-Bold_23:	97
+Roboto-Italic_21:	120
+Champagne & Limousines Bold_24:	97
+Roboto-Medium_18:	106
+Roboto-Light_17:	117
+Roboto-Thin_24:	105
+Roboto-BlackItalic_24:	108
+Courier_23:	47
+Champagne & Limousines Bold_23:	128
+Roboto-BoldCondensedItalic_22:	109
+CaviarDreams Bold_25:	103
+Roboto-BoldCondensed_15:	113
+Roboto-Light_25:	106
+Roboto-Condensed_22:	109
+CaviarDreams BoldItalic_22:	93
+Roboto-LightItalic_24:	107
+vogue_25:	613
+vogue_22:	599
+Roboto-ThinItalic_25:	124
+Roboto-Light_20:	92
+Roboto-MediumItalic_17:	134
+Roboto-BoldCondensedItalic_18:	92
+Arial_25:	44
+Roboto-Condensed_19:	98
+Champagne & Limousines_22:	114
+CaviarDreams Italic_22:	107
+Champagne & Limousines_19:	121
+CaviarDreams_15:	130
+Roboto-Black_16:	122
+Roboto-ThinItalic_23:	108
+vogue_23:	603
+Roboto-BoldItalic_18:	107
+Roboto-Black_23:	101
+Courier_22:	41
