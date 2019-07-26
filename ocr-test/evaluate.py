@@ -64,6 +64,8 @@ def report(fails: Dict[str, List[Fail]]):
         mdFile.new_header(level=3, title="Explanation", add_table_of_contents='n')
         mdFile.new_paragraph(fail_typ.explanation)
         mdFile.new_line(f'There were in total {len(fails[fail_typ])} of {fail_typ.title}')
+        mdFile.new_header(level=3, title="Fails", add_table_of_contents='n')
+        mdFile.new_line()
         for fail in fails[fail_typ]:
             mdFile = fail.to_md(mdFile)
 
