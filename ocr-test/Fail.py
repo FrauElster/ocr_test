@@ -76,6 +76,7 @@ class LenFail(Fail):
 
 class NoFail(Fail):
     title = "Passed Files"
+    explanation = "File passed. There were no mismatches in OCR recognition"
 
     def __init__(self, file_path: str):
         super().__init__(file_path)
