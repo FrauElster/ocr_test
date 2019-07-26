@@ -26,6 +26,7 @@ class Fail(ABC):
 
 class RecognitionFail(Fail):
     title = "Word Recognition Fails"
+    explanation = "All words were recognized by the OCR, but some with errors."
 
     def __init__(self, file_path: str, error_tuples: List[Tuple[str, str]]):
         super().__init__(file_path)
@@ -40,7 +41,9 @@ class RecognitionFail(Fail):
         return return_string
 
     def to_md(self, mdFile: MdUtils) -> MdUtils:
-        mdFile.new_line(f'{self.font_name} - {self.font_size}:')
+        mdFile.new_line(f'{self.font_name} - {self.font_size}:', bold_italics_code='b')
+        mdFile.new_line(f'There were in total {len(self.error_words)} mismatches.')
+        mdFile.new_line()
         md_text: List[str] = ['Word in PDF', 'Recognized Word', 'Levenshtein Distance']
         for word_fail in self.error_words:
             md_text.extend([word_fail.pdf_word, word_fail.ocr_word, str(word_fail.error_value)])
@@ -50,7 +53,8 @@ class RecognitionFail(Fail):
 
 class LenFail(Fail):
     title = "Text Len Mismatch"
-    explanation = "Font - "
+    explanation = "The OCR recognized fewer words than there were actually encoded. For that reason a word by word " \
+                  "comparison isn't possible."
 
     def __init__(self, file_path: str, ocr_len: int, pdf_len: int, total_levensthein: int):
         super().__init__(file_path)
@@ -62,7 +66,11 @@ class LenFail(Fail):
         return f'{self.font_name} - {self.font_size}:\t{self.pdf_len}\t{self.ocr_len}\t{self.total_levensthein}'
 
     def to_md(self, mdFile: MdUtils) -> MdUtils:
-        mdFile.new_line(str(self))
+        md_text: List[str] = ['Font name - size', 'Words in PDF', 'Recognized words',
+                              'Levenshtein distance of total text']
+        md_text.extend(
+            [f'{self.font_name} - {self.font_size}', str(self.pdf_len), str(self.ocr_len), str(self.total_levensthein)])
+        mdFile.new_table(columns=4, rows=2, text=md_text, text_align='center')
         return mdFile
 
 

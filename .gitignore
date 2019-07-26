@@ -2,7 +2,6 @@ out/*
 venv/
 .idea/
 out_create/
-out.json
 report.txt
 ocr-test/__pycache__/
-test_report
+report.md

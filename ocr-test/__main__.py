@@ -28,6 +28,14 @@ def delete_txt():
         os.remove(filename)
 
 
+def rename():
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../out_create')
+    for file_path in glob.glob(os.path.join(file_path, '*.txt')):
+        if ' _ ' in file_path:
+            os.rename(file_path, file_path.replace(" _ ", " & "))
+
+
 if __name__ == "__main__":
     main()
+    # rename()
     # delete_txt()

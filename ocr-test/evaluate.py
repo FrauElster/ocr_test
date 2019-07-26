@@ -1,23 +1,22 @@
-import os
 import glob
+import os
 import time
 from typing import *
-import json
 
 from mdutils import MdUtils
-from tika import parser
 
 from . import utils
+from .Fail import Fail, LenFail, RecognitionFail, NoFail
 from .FileHandler import FileHandler
-from .Fail import Fail, WordFail, LenFail, RecognitionFail, NoFail
 
 
 def main(path: str):
-    fail_dict = analyse(path)
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
+    fail_dict = analyse(file_path)
     report(fail_dict)
 
 
-def analyse(filepath:str) -> Dict[str, List[Fail]]:
+def analyse(filepath: str) -> Dict[str, List[Fail]]:
     print("Starting to analyse")
     start_time = time.time()
     fail_dict: Dict[str, List[Fail]] = {}
@@ -62,6 +61,9 @@ def report(fails: Dict[str, List[Fail]]):
 
     for fail_typ in fails.keys():
         mdFile.new_header(level=2, title=fail_typ.title, add_table_of_contents='n')
+        mdFile.new_header(level=3, title="Explanation", add_table_of_contents='n')
+        mdFile.new_paragraph(fail_typ.explanation)
+        mdFile.new_line(f'There were in total {len(fails[fail_typ])} of {fail_typ.title}')
         for fail in fails[fail_typ]:
             mdFile = fail.to_md(mdFile)
 
@@ -69,8 +71,5 @@ def report(fails: Dict[str, List[Fail]]):
     print(f'Finished reporting after {time.time() - start_time} sec')
 
 
-
-
 if __name__ == "__main__":
-    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", 'out_create/')
     main(file_path)
