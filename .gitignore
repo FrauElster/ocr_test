@@ -4,5 +4,5 @@ venv/
 out_create/
 out.json
 report.txt
-src/__pycache__/
+ocr-test/__pycache__/
 test_report
