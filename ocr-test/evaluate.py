@@ -11,7 +11,7 @@ from .FileHandler import FileHandler
 
 
 def main(path: str):
-    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
+    file_path = FileHandler.get_path(path)
     fail_dict = analyse(file_path)
     report(fail_dict)
 
@@ -71,7 +71,3 @@ def report(fails: Dict[str, List[Fail]]):
 
     mdFile.create_md_file()
     print(f'Finished reporting after {time.time() - start_time} sec')
-
-
-if __name__ == "__main__":
-    main(file_path)

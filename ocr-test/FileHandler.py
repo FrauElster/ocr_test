@@ -1,3 +1,4 @@
+import glob
 import os
 import typing
 
@@ -5,6 +6,10 @@ from tika import parser
 
 
 class FileHandler:
+    @staticmethod
+    def get_path(file_path) -> str:
+        return os.path.join(os.path.dirname(os.path.abspath(__file__)), file_path)
+
     @staticmethod
     def load_file(file_path) -> typing.Optional[str]:
         if os.path.isfile(file_path):
@@ -54,3 +59,15 @@ class FileHandler:
         for line in content.split("\n"):
             words.extend(list(filter(lambda word: word != "", line.split(" "))))
         return words
+
+    @staticmethod
+    def delete_with_ending(dir_path: str, ending: str) -> bool:
+        dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), dir_path)
+        if os.path.isdir(dir_path):
+            for file_path in glob.glob(os.path.join(dir_path, '*.*')):
+                if file_path.split(".")[-1] == ending:
+                    os.remove(file_path)
+            return True
+        else:
+            print(f'{dir_path} is not a directory')
+            return False

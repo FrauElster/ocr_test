@@ -3,6 +3,7 @@ import os
 import click
 
 from . import create_pdf, evaluate
+from .FileHandler import FileHandler
 
 
 @click.group()
@@ -23,9 +24,15 @@ def eval(path: str):
     evaluate.main(path)
 
 
-def delete_txt():
-    for filename in glob.glob(os.path.join('../out_create/', '*.txt')):
-        os.remove(filename)
+@main.command()
+@click.option('--type', required=True, type=click.Choice(['txt', 'pdf']))
+def delete(type: str):
+    if type == 'txt':
+        FileHandler.delete_with_ending('../out_create/', '*.txt')
+    elif type == 'pdf':
+        FileHandler.delete_with_ending('../out_create/', '*.pdf')
+    else:
+        print(f'{type} not recognized')
 
 
 def rename():
@@ -39,3 +46,4 @@ if __name__ == "__main__":
     main()
     # rename()
     # delete_txt()
+    # delete_pdf()
