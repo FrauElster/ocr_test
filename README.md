@@ -24,7 +24,7 @@ the maximum font size.
 To evaluate: `python -m ocr-test eval`. 
 The Evaluation might, depending on the amount of files to evaluate, take some time.
 
-To delete: `python -m ocr-test delete {type}` where `{type}` is `txt` or `pdf`.
+To delete: `python -m ocr-test delete --type {type}` where `{type}` is `txt` or `pdf`.
 This deletes the `*.pdf` or `*.txt` in the `out_create/` directory.
 
 ## Add Fonts

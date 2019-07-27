@@ -45,5 +45,3 @@ def rename():
 if __name__ == "__main__":
     main()
     # rename()
-    # delete_txt()
-    # delete_pdf()

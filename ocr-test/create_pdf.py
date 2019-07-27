@@ -33,11 +33,12 @@ def create_pdfs(min_font_size: int, max_font_size: int, text: str):
             font_name = font_name.split('.')[0]
             make_pdf(pdf, font_name, font_size, text)
 
+
 def get_special_fonts():
     os.environ['FPDF_FONTPATH'] = FileHandler.get_path('../fonts')
     os.environ['FPDF_CACHE_MODE'] = FileHandler.get_path('1')
     special_fonts: List[str] = []
-#    for filename in glob.glob(os.path.join(FileHandler.get_path('../fonts'), '*.ttf')):
+    #    for filename in glob.glob(os.path.join(FileHandler.get_path('../fonts'), '*.ttf')):
     for filename in glob.glob(os.path.join(FileHandler.get_path('../fonts'), '*.ttf')):
         print(f'DEBUG: {filename}')
         special_fonts.append(filename)
