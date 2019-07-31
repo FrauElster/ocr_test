@@ -11,6 +11,7 @@ from .FileHandler import FileHandler
 class Fail(ABC):
     title: str
     explanation: str
+    total_levenshtein: int
 
     def __init__(self, file_path: str):
         self.file_name: str = FileHandler.get_filename(file_path)
@@ -28,8 +29,9 @@ class RecognitionFail(Fail):
     title = "Word Recognition Fails"
     explanation = "All words were recognized by the OCR, but some with errors."
 
-    def __init__(self, file_path: str, error_tuples: List[Tuple[str, str]]):
+    def __init__(self, file_path: str, error_tuples: List[Tuple[str, str]], total_levensthein: int):
         super().__init__(file_path)
+        self.total_levenshtein: int = total_levensthein
         self.error_words: List[WordFail] = list(
             map(lambda error_tuple: WordFail(error_tuple[0], error_tuple[1]), error_tuples))
 
@@ -43,6 +45,7 @@ class RecognitionFail(Fail):
     def to_md(self, mdFile: MdUtils) -> MdUtils:
         mdFile.new_line(f'{self.font_name} - {self.font_size}:', bold_italics_code='b')
         mdFile.new_line(f'There were in total {len(self.error_words)} mismatches.')
+        mdFile.new_line(f'The levenshtein distance of the complete text is {self.total_levenshtein}')
         mdFile.new_line()
         md_text: List[str] = ['Word in PDF', 'Recognized Word', 'Levenshtein Distance']
         for word_fail in self.error_words:
@@ -60,17 +63,13 @@ class LenFail(Fail):
         super().__init__(file_path)
         self.ocr_len: int = ocr_len
         self.pdf_len: int = pdf_len
-        self.total_levensthein: int = total_levensthein
+        self.total_levenshtein: int = total_levensthein
 
     def __str__(self):
         return f'{self.font_name} - {self.font_size}:\t{self.pdf_len}\t{self.ocr_len}\t{self.total_levensthein}'
 
     def to_md(self, mdFile: MdUtils) -> MdUtils:
-        md_text: List[str] = ['Font name - size', 'Words in PDF', 'Recognized words',
-                              'Levenshtein distance of total text']
-        md_text.extend(
-            [f'{self.font_name} - {self.font_size}', str(self.pdf_len), str(self.ocr_len), str(self.total_levensthein)])
-        mdFile.new_table(columns=4, rows=2, text=md_text, text_align='center')
+        print("Len_Fail should not call to_md for formatting")
         return mdFile
 
 
@@ -80,6 +79,7 @@ class NoFail(Fail):
 
     def __init__(self, file_path: str):
         super().__init__(file_path)
+        self.total_levenshtein = 0
 
     def __str__(self):
         return f'{self.font_name} - {self.font_size}'

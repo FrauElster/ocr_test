@@ -25,14 +25,9 @@ def eval(path: str):
 
 
 @main.command()
-@click.option('--type', required=True, type=click.Choice(['txt', 'pdf']))
+@click.option('--type', required=True)
 def delete(type: str):
-    if type == 'txt':
-        FileHandler.delete_with_ending('../out_create/', '*.txt')
-    elif type == 'pdf':
-        FileHandler.delete_with_ending('../out_create/', '*.pdf')
-    else:
-        print(f'{type} not recognized')
+    FileHandler.delete_with_ending('../out_create/', type)
 
 
 def rename():
@@ -43,5 +38,6 @@ def rename():
 
 
 if __name__ == "__main__":
+    rename()
     main()
-    # rename()
+
